@@ -27,6 +27,7 @@ addons:
 env:
   global:
     - CC=mpicc
+    - PETSC_CONFIGURE_OPTIONS="--with-debugging=1"
   matrix:
     - PYOP2_BACKEND=sequential PYOP2_TESTS=regression
     - OMP_NUM_THREADS=1 PYOP2_BACKEND=openmp PYOP2_TESTS=regression
