@@ -711,20 +711,6 @@ If you really want to use your own PETSc build, please run again with the
 --honour-petsc-dir option.
 """)
 
-if travis:
-    # Produce once a minute output so that travis doesn't think
-    # we're stalled
-    from multiprocessing import Process
-
-    def stdout_writer():
-        import time
-        while True:
-            time.sleep(60)
-            print "."
-
-    travis_writer = Process(target=stdout_writer)
-    travis_writer.daemon = True
-    travis_writer.start()
 
 # Check operating system.
 osname = platform.uname()[0]
@@ -971,7 +957,3 @@ log.info("\nFiredrake has been installed in a python virtualenv. You activate it
 log.info("  . firedrake/bin/activate\n")
 log.info("The virtualenv can be deactivated by running:\n")
 log.info("  deactivate")
-
-
-if travis:
-    travis_writer.terminate()
