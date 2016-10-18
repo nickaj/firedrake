@@ -29,6 +29,7 @@ import pytest
 from firedrake import *
 
 
+@pytest.mark.xfail(reason="HDivTrace.tabulate does not accept entity yet.")
 @pytest.mark.parametrize('degree', range(1, 3))
 def test_hybridisation(degree):
     # Create mesh
