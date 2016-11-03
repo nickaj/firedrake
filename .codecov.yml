@@ -1,6 +1,9 @@
 comment:
   layout: "header, diff, changes"
 
+codecov:
+  token: secret:m05wMkTa6BxcfiTkGCEqhEpZqFgW9l2CQOtn5MZN7HSCXlMSJ5MZVU+7SINw/ooOpwIjwibuXsWL9uFNuFAfeKnaDQLRrVEDhXgyPTn08Hg=
+
 coverage:
   status:
     project:
